@@ -1,6 +1,8 @@
-# Showcase Your Learning With Docusaurus + Azure Static Web App
+# Deploy your Docusaurus site to Azure Static Web App
 
 This is a tutorial shared as part of the #30DaysOfSWA series, to showcase the use of Azure Static Web Apps with the open-source Docusaurus static site generator from Meta.
+
+---
 
 ## What We'll Learn:
 
@@ -9,10 +11,32 @@ This is a tutorial shared as part of the #30DaysOfSWA series, to showcase the us
  * Configure: docusaurus.config.js
  * Deploy: Azure Static Web Apps
  * Customize: Themes & Plugins
- * `Exercise`: 
+ * `Exercise`: Try Extending this demo
     - Add API to fetch content!
     - Add Auth to tweet content!
     - Add MDX component to page!
+
+---
+
+## What We'll Build
+
+🎉  **The site is [live on Azure Static Web Apps](https://zealous-bay-0062c640f.1.azurestaticapps.net/)**
+
+---
+
+## How We'll Build it
+Follow the tutorial below - this will also be published on 
+ * [#30DaysOfSWA site](https://aka.ms/30DaysOfSWA) 
+ * [dev.to series](https://dev.to/nitya/series/17901) 
+ 
+on **Day 12** of the series (`May 12, 2022`) - which happens to be the first anniversary of Azure Static Web Apps becoming [generally available](https://azure.microsoft.com/en-us/updates/azure-static-web-apps-is-now-generally-available/). 🎂 
+
+---
+
+## Resources:
+ * [Docusaurus](https://docusaurus.io/) - documentation
+ * [Azure Static Web Apps (SWA)](https://docs.microsoft.com/en-us/azure/static-web-apps/) - documentation
+ * [#30DaysOfSWA](https://aka.ms/30DaysOfSWA) - guide tour to SWA.
 
 ---
 
@@ -185,20 +209,6 @@ Committing these changes should automatically rebuild and update the deployed si
 |Light Mode |  Dark Mode|
 |:---|:---|
 |![Light Mode](./img/11-swa-light.png)|![Dark Mode](./img/11-swa-dark.png) |
-
-
-
-
----
-
-## Exercise
-
-  - Add API to fetch content!
-  - Add Auth to tweet content!
-  - Add MDX component to page!
-
-## Resources
-
 
 ---
 
