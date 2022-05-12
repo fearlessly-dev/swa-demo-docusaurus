@@ -92,22 +92,116 @@ If you prefer the first approach, click the button to go to the Azure portal, th
 
 [![Deploy to Azure button](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/?feature.customportal=false&WT.mc_id=30daysofswa-61155-cxall#create/Microsoft.StaticApp)
 
-## Deploy Site: with VSCode
+## Deploy Site: using VSCode
 
-I'll use the [Visual Studio Code extension](https://docs.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=vanilla-javascript) to make this happen with just a few clicks. _Note: All screenshots were captured on (or are valid for) VS Code version 1.66.2_
+I'll use the [Visual Studio Code extension](https://docs.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=vanilla-javascript) to make this happen with just a few clicks. 
 
-1. **Install Extension** | Open Visual Studio Code (IDE) in the project folder for your repo. Install the [Azure Static Web Apps extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps) by visiting this page and clicking "Install".
+The whole process happens within the VS Code window, and takes just a few minutes from start to finish - _with guided prompts to help all the way_. For convenience, I've documented it step-by-step with screenshots (images valid for _VS Code ver 1.66.2_).
+
+> 1. Install the Extension
+
+Open Visual Studio Code (IDE) in the project folder for your repo. Install the [Azure Static Web Apps extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps) by visiting this page and clicking "Install".
 
 ![VS Code Extension for SWA](./img/11-extension.png)
+
+> 2. Validate Extension Install
 
 When extension is installed, you should see this window in your VS Code editor, confirming readiness for use.
 
 ![VS Code Extension Installed](./img/11-vscode.png)
 
-2. **Create your first Azure Static App** | The extension's [documentation page](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps) walks you through the steps needed visually, so reference it! You can also visit its [GitHub](https://github.com/microsoft/vscode-azurestaticwebapps/wiki/Creating-a-Static-Web-App) page for more details. Start by clicking the `Azure` icon in your VS Code sidebar, scroll down to the `Static Web Apps` section, then click the "+" button to **Create Static Web App**.
+> 3. Find Azure Static Web Apps section under "Azure"
+
+The extension's [documentation page](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps) and its [GitHub](https://github.com/microsoft/vscode-azurestaticwebapps/wiki/Creating-a-Static-Web-App) page both provide detailed walkthroughs - check those for the most current process for this. We'll start by clicking the _Azure_ icon in the VS Code sidebar, then scrolling down till we see this `Static Web Apps` section.
+
+Click the "+" button to start the **Create Static Web App** workflow.
 
 ![Activate SWA Extension](./img/11-swa-plus.png)
 
-You should have started this flow while in your Docusaurus project folder. If you see this prompt, commit current project updates to GitHub before continuing.
+> 4. Commit project changes if needed.
+
+The _"Create Static Web Apps"_ process will create (and commit) a GitHub actions workflow for you that will automate the build/deploy process for your site directly from your source on all future codebase changes.
+
+So if you have _current pending codebase changes_ it will first prompt you to commit them before it does its magic! Let's get that done!
 
 ![Commit changes](./img/11-commit.png)
+
+
+> 5. Follow the 5-step prompts
+
+The extension walks you through the five steps shown below, each with defaults already filled in for you. Customize them as shown, for this project:
+
+| Screenshot | Step |
+|:---|:---|
+| ![Step 1](./img/11-swa-1.png)<br/> | Specify project name |
+| ![Step 2](./img/11-swa-2.png) <br/>| Pick Azure region to deploy it in |
+| ![Step 3](./img/11-swa-3.png)<br/> | Pick framework used by app |
+| ![Step 4](./img/11-swa-4.png)<br/> | Specify folder contaning site source |
+| ![Step 5](./img/11-swa-5.png)<br/> | Specify folder where site gets built by default |
+| | |
+
+> 6. Sit back and relax!
+
+In a few seconds, you'll see this alert - this indicates that the workflow is **creating and committing the GitHub Actions build/deploy workflow YAML** for you. 🎉
+
+![Created](./img/11-swa-created.png)
+
+If you check your repository right now, you'll find the [relevant commit](https://github.com/fearlessly-dev/swa-demo-docusaurus/commit/1005a16c10bbbce51c8526a3c14253d1aec1a59c) and the [activated Actions flow](https://github.com/fearlessly-dev/swa-demo-docusaurus/actions/runs/2313039968) (labeled `ci: add Azure Static Web Apps worfklow`) in progress.
+
+You can also track the progress and configuration settings of your app right there in the VS Code Sidebar, under the `Static Web Apps` section. _Look for the project name, and unroll contents.._
+
+![Sidebar](./img/11-swa-sidebar.png)
+
+
+> 7. Validate the deploy!
+
+In a few second more, you'll get this alert:
+
+![Deployed](./img/11-swa-deployed.png)
+
+Now, go to the sidebar section for your project, right-click the name to see the available menu options:
+
+![Browse](./img/11-swa-browse.png)
+
+Click "Browse Site" to be taken to your live deployed Docusaurus website! That's it! A few clicks, customizing defaults - and you're done!
+
+---
+
+## Next: Customize It!
+
+At this point, you can make any changes to the site source, commit them - and watch the site get rebuilt and deployed without any further action from you!
+
+Here are some things to try:
+ * Customize [styles or layout](https://docusaurus.io/docs/styling-layout)
+ * Explore [plugins](https://docusaurus.io/docs/api/plugins) for SEO, Search etc.
+ * Try [create/use MDX](https://docusaurus.io/docs/markdown-features/react#using-jsx-in-markdown) in content
+
+I a few examples changes to the `docusaurus.config.js` file to personalize the landing page content to reflect my needs. 
+
+And I updated the `src/css/custom.css` file to reflect new theme colors for dark/light mode - and replaced the `logo.svg` file.
+
+Committing these changes should automatically rebuild and update the deployed site. Here is what they looked like in my local preview, before I committed the changes.
+
+|Light Mode |  Dark Mode|
+|:---|:---|
+|![Light Mode](./img/11-swa-light.png)|![Dark Mode](./img/11-swa-dark.png) |
+
+
+
+
+---
+
+## Exercise
+
+  - Add API to fetch content!
+  - Add Auth to tweet content!
+  - Add MDX component to page!
+
+## Resources
+
+
+---
+
+🎉  **Check it out: The site is [live on Azure Static Web Apps](https://zealous-bay-0062c640f.1.azurestaticapps.net/)**
+
+---

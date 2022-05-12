@@ -6,9 +6,9 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Static Web Apps Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'My SWA-ntastic Site!',
+  tagline: 'Learn more on #30DaysOfSWA',
+  url: 'https://zealous-bay-0062c640f.1.azurestaticapps.net/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -16,8 +16,9 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'fearlessly-dev', // Usually your GitHub org/user name.
+  projectName: 'swa-demo-docusaurus', // Usually your repo name.
+  trailingSlash: false,
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -37,14 +38,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/fearlessly-dev/swa-demo-docusaurus/blob/main/www/sidebars.js',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/fearlessly-dev/swa-demo-docusaurus/tree/main/www/blog',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -57,9 +58,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'My Site',
+        title: 'SWA-Me!',
         logo: {
-          alt: 'My Site Logo',
+          alt: '#30DaysOfSWA Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -71,7 +72,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/fearlessly-dev/swa-demo-docusaurus',
             label: 'GitHub',
             position: 'right',
           },
@@ -94,15 +95,15 @@ const config = {
             items: [
               {
                 label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                href: 'https://stackoverflow.com/questions/tagged/swa',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: '#30DaysOfSWA',
+                href: 'https:/aka.ms/30DaysOfSWA',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/AzureStaticApps',
               },
             ],
           },
@@ -115,12 +116,12 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/fearlessly-dev/swa-demo-docusaurus',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} My #30DaysOfSWA Demo. Built with Docusaurus and Azure Static Web Apps.`,
       },
       prism: {
         theme: lightCodeTheme,
