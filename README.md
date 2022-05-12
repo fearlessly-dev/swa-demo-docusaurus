@@ -94,7 +94,7 @@ If you prefer the first approach, click the button to go to the Azure portal, th
 
 ## Deploy Site: with VSCode
 
-I'll use the [Visual Studio Code extension](https://docs.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=vanilla-javascript) to make this happen with just a few clicks. 
+I'll use the [Visual Studio Code extension](https://docs.microsoft.com/en-us/azure/static-web-apps/getting-started?tabs=vanilla-javascript) to make this happen with just a few clicks. _Note: All screenshots were captured on (or are valid for) VS Code version 1.66.2_
 
 1. **Install Extension** | Open Visual Studio Code (IDE) in the project folder for your repo. Install the [Azure Static Web Apps extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurestaticwebapps) by visiting this page and clicking "Install".
 
@@ -108,3 +108,6 @@ When extension is installed, you should see this window in your VS Code editor, 
 
 ![Activate SWA Extension](./img/11-swa-plus.png)
 
+You should have started this flow while in your Docusaurus project folder. If you see this prompt, commit current project updates to GitHub before continuing.
+
+![Commit changes](./img/11-commit.png)
